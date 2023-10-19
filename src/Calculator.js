@@ -33,6 +33,8 @@ const Calculator = ()=>{
     const education = ['highSchool','undergrad', 'bachelor', 'professional'];
     const [eduIdx, setEduIdx] = useState(0);
     const [titleIdx, setTitleIdx] = useState(0);
+    const [page, setPage] = useState(1);
+    const [showPages, setShowPages] = useState(true);
 
     const onTitleChange = (e)=>{
         const clickedItemId = parseInt(e.target.attributes['data-id'].value);
@@ -59,9 +61,6 @@ const Calculator = ()=>{
         }
         setEduIdx(clickedItemId);
     }
-    
-    const [page, setPage] = useState(1);
-    const [showPages, setShowPages] = useState(true);
 
     const onQuantityChange = (e)=>{
         const clickedItemId = parseInt(e.target.attributes['data-id'].value);
